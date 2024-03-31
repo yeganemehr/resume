@@ -14,6 +14,25 @@ jobs:
           packages: >-
             scheme-basic
             collection-xetex
+            enumitem
+            ragged2e
+            xcolor
+            xifthen
+            ifmtarg
+            etoolbox
+            setspace
+            fontspec
+            unicode-math
+            fontawesome5
+            roboto
+            xkeyval
+            sourcesanspro
+            tcolorbox
+            basiclayer pgf
+            environ
+            tikzfill
+            parskip
+            biblatex
             texliveonfly
 
       - name: Build Resume PDF
