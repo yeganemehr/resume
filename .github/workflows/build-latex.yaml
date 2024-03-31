@@ -1,0 +1,24 @@
+name: Build LaTeX document
+on: [push]
+jobs:
+  build-latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Git repository
+        uses: actions/checkout@v4
+
+      - name: Setup TeX Live
+        uses: teatimeguest/setup-texlive-action@v3
+        with:
+          packages: >-
+            scheme-basic
+            texliveonfly
+
+      - name: Build Resume PDF
+        run: texliveonfly -c xelatex resume.tex
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: resume
+          path: resume.pdf
+          if-no-files-found: error
