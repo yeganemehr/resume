@@ -28,7 +28,7 @@ jobs:
             xkeyval
             sourcesanspro
             tcolorbox
-            basiclayer pgf
+            pgf
             environ
             tikzfill
             parskip
