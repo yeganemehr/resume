@@ -10,8 +10,10 @@ jobs:
       - name: Setup TeX Live
         uses: teatimeguest/setup-texlive-action@v3
         with:
+          repository: https://mirror.math.princeton.edu/pub/CTAN/systems/texlive/tlnet
           packages: >-
             scheme-basic
+            collection-xetex
             texliveonfly
 
       - name: Build Resume PDF
