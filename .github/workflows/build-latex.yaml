@@ -35,11 +35,11 @@ jobs:
             biblatex
             texliveonfly
 
-      - name: Build Resume PDF
-        run: texliveonfly -c xelatex resume.tex
+      - name: Build PHP Resume
+        run: texliveonfly -c xelatex as-php-developer.tex
 
       - uses: actions/upload-artifact@v4
         with:
           name: resume
-          path: resume.pdf
+          path: "*.pdf"
           if-no-files-found: error
