@@ -147,7 +147,7 @@
 \newcommand*{\headerfontlight}{\robotolight}
 \newcommand*{\footerfont}{\sourcesanspro}
 \newcommand*{\bodyfont}{\sourcesanspro}
-\newcommand*{\bodyfontlight}{\sourcesansprolight}
+\newcommand*{\bodyfontlight}{\sourcesanspro}
 
 %-------------------------------------------------------------------------------
 %                Configuration for styles
@@ -474,7 +474,7 @@
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://github.com/\@github}{\faGithubSquare\acvHeaderIconSep\@github}%
+          \href{https://github.com/\@github}{\faGithubSquare\acvHeaderIconSep github.com/\@github}%
         }%
       \ifthenelse{\isundefined{\@gitlab}}%
         {}%
@@ -498,7 +498,7 @@
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://www.linkedin.com/in/\@linkedin}{\faLinkedin\acvHeaderIconSep\@linkedin}%
+          \href{https://www.linkedin.com/in/\@linkedin}{\faLinkedin\acvHeaderIconSep linkedin.com/in/\@linkedin}%
         }%
       \ifthenelse{\isundefined{\@orcid}}%
         {}%
