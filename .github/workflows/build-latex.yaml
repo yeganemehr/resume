@@ -38,6 +38,9 @@ jobs:
       - name: Build PHP Resume
         run: texliveonfly -c xelatex as-php-developer.tex
 
+      - name: Build JS Resume
+        run: texliveonfly -c xelatex as-js-developer.tex
+
       - uses: actions/upload-artifact@v4
         with:
           name: resume

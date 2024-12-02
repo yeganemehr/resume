@@ -1,0 +1,68 @@
+\documentclass[11pt, a4paper]{russell}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+\fontdir[fonts/]
+
+% russell Colors: russell-emerald, russell-skyblue, russell-red, russell-pink, russell-orange
+%                 russell-nephritis, russell-concrete, russell-darknight, russell-purple
+\colorlet{russell}{russell-black}
+% Uncomment if you would like to specify your own color
+% \definecolor{russell}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with russell color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+\name{Amir}{Yeganemehr}
+\position{Senior JavaScript Developer} 
+ 
+\mobile{+98 9137113497}
+\email{amir@yeganemehr.net}
+%\dateofbirth{January 1st, 1970}
+\homepage{yeganemehr.net} 
+\github{yeganemehr}
+\linkedin{yeganemehr} 
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \kaggle{kaggle-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra information}
+
+% \quote{``Done is better than perfect."}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makecvheader
+
+
+\makecvfooter
+  {\today}
+  {}
+  {\thepage}
+ 
+\input{as-js-developer/skills.tex}
+\input{as-js-developer/experience.tex}
+\input{as-js-developer/projects.tex}
+\input{cv/education.tex}
+\input{cv/languages.tex}
+
+\vspace*{\fill}
+%-------------------------------------------------------------------------------
+\end{document}
