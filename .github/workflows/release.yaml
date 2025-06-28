@@ -1,0 +1,54 @@
+name: Release PDF files
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Git repository
+        uses: actions/checkout@v4
+
+      - name: Setup TeX Live
+        uses: teatimeguest/setup-texlive-action@v3
+        with:
+          repository: https://mirror.math.princeton.edu/pub/CTAN/systems/texlive/tlnet
+          packages: >-
+            scheme-basic
+            collection-xetex
+            enumitem
+            ragged2e
+            xcolor
+            xifthen
+            ifmtarg
+            etoolbox
+            setspace
+            fontspec
+            unicode-math
+            fontawesome5
+            roboto
+            xkeyval
+            sourcesanspro
+            tcolorbox
+            pgf
+            environ
+            tikzfill
+            parskip
+            biblatex
+            texliveonfly
+
+      - name: Build PHP Resume
+        run: make as-php-developer
+
+      - name: Build JS Resume
+        run: make as-js-developer
+
+      - name: Create Release
+        run: gh release create "$TAG_NAME" dist/*.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG_NAME: ${{ github.ref_name }}
