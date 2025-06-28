@@ -36,13 +36,13 @@ jobs:
             texliveonfly
 
       - name: Build PHP Resume
-        run: texliveonfly -c xelatex as-php-developer.tex
+        run: make as-php-developer
 
       - name: Build JS Resume
-        run: texliveonfly -c xelatex as-js-developer.tex
+        run: make as-js-developer
 
       - uses: actions/upload-artifact@v4
         with:
           name: resume
-          path: "*.pdf"
+          path: "dist/*.pdf"
           if-no-files-found: error
